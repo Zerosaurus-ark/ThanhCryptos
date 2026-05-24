@@ -1,147 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thanhckrypto | Linktree</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-            padding: 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thanh Crypto</title>
 
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: #444;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            background-size: cover;
-            background-position: center;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        h1 {
-            margin: 10px 0;
-            font-size: 28px;
-        }
+  <style>
 
-        p {
-            margin: 5px 0 20px 0;
-            font-size: 16px;
-            color: #aaa;
-        }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-        .link-container {
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+    body{
+      font-family:'Poppins',sans-serif;
+      background:
+      radial-gradient(circle at top left,#312e81 0%,transparent 30%),
+      radial-gradient(circle at bottom right,#7c3aed 0%,transparent 30%),
+      linear-gradient(135deg,#020617,#0f172a,#111827);
 
-        .link {
-            background-color: #1f1f1f;
-            padding: 15px;
-            text-align: center;
-            border-radius: 10px;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
+      min-height:100vh;
+      color:white;
 
-        .link:hover {
-            background-color: #333;
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            filter: brightness(1.2);
-        }
+      display:flex;
+      justify-content:center;
+      align-items:center;
 
-        .menu {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            font-size: 20px;
-            color: #aaa;
-        }
+      overflow-x:hidden;
+      padding:30px;
+    }
 
-        .share-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #1f1f1f;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: background-color 0.3s;
-        }
+    .container{
+      width:100%;
+      max-width:430px;
 
-        .share-button:hover {
-            background-color: #333;
-        }
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
 
-        footer {
-            margin-top: auto;
-            padding: 20px;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
+      backdrop-filter:blur(16px);
+
+      border-radius:30px;
+
+      padding:35px 25px;
+
+      box-shadow:
+      0 0 40px rgba(139,92,246,0.25),
+      0 10px 40px rgba(0,0,0,0.4);
+
+      position:relative;
+    }
+
+    .top-glow{
+      position:absolute;
+      width:200px;
+      height:200px;
+
+      background:#8b5cf6;
+      filter:blur(120px);
+
+      top:-80px;
+      right:-80px;
+
+      opacity:0.35;
+
+      z-index:-1;
+    }
+
+    .avatar{
+      width:120px;
+      height:120px;
+
+      margin:auto;
+
+      border-radius:50%;
+
+      background-image:url('https://i.postimg.cc/Y09647gV/unnamed-1.png');
+      background-size:cover;
+      background-position:center;
+
+      border:4px solid rgba(139,92,246,0.8);
+
+      box-shadow:
+      0 0 30px rgba(139,92,246,0.6),
+      0 0 60px rgba(139,92,246,0.3);
+    }
+
+    h1{
+      text-align:center;
+      margin-top:22px;
+
+      font-size:32px;
+      font-weight:700;
+
+      letter-spacing:1px;
+    }
+
+    .username{
+      color:#a78bfa;
+    }
+
+    .bio{
+      text-align:center;
+
+      margin-top:12px;
+
+      color:#cbd5e1;
+
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .small-text{
+      color:#94a3b8;
+      font-size:13px;
+
+      margin-top:8px;
+    }
+
+    .links{
+      margin-top:35px;
+
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .link{
+      text-decoration:none;
+      color:white;
+
+      background:rgba(255,255,255,0.06);
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      border-radius:18px;
+
+      padding:18px 20px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      transition:0.3s ease;
+
+      position:relative;
+
+      overflow:hidden;
+    }
+
+    .link::before{
+      content:'';
+
+      position:absolute;
+
+      width:100%;
+      height:100%;
+
+      background:linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.08),
+      transparent);
+
+      left:-100%;
+      top:0;
+
+      transition:0.6s;
+    }
+
+    .link:hover::before{
+      left:100%;
+    }
+
+    .link:hover{
+      transform:translateY(-4px) scale(1.02);
+
+      background:rgba(139,92,246,0.15);
+
+      border:1px solid rgba(139,92,246,0.35);
+
+      box-shadow:
+      0 0 25px rgba(139,92,246,0.35);
+    }
+
+    .left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .emoji{
+      font-size:22px;
+    }
+
+    .title{
+      font-size:16px;
+      font-weight:500;
+    }
+
+    .arrow{
+      color:#a78bfa;
+      font-size:18px;
+    }
+
+    .socials{
+      margin-top:35px;
+
+      display:flex;
+      justify-content:center;
+      gap:18px;
+    }
+
+    .social{
+      width:50px;
+      height:50px;
+
+      border-radius:16px;
+
+      background:rgba(255,255,255,0.06);
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      text-decoration:none;
+      color:white;
+
+      font-size:20px;
+
+      transition:0.3s;
+    }
+
+    .social:hover{
+      transform:translateY(-5px);
+
+      background:#8b5cf6;
+
+      box-shadow:
+      0 0 20px rgba(139,92,246,0.45);
+    }
+
+    footer{
+      text-align:center;
+
+      margin-top:35px;
+
+      color:#64748b;
+
+      font-size:13px;
+    }
+
+    @media(max-width:480px){
+
+      .container{
+        padding:30px 20px;
+      }
+
+      h1{
+        font-size:28px;
+      }
+
+      .title{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
 
-    <button class="share-button" onclick="sharePage()">...</button>
+  <div class="container">
 
-  <div class="avatar" style="background-image: url('https://i.postimg.cc/Y09647gV/unnamed-1.png');"></div>
+    <div class="top-glow"></div>
 
-    <h1>thanhckrypto</h1>
-    <p>Chia sẻ crypto, cày sự kiện, kiếm tiền cùng nhau!</p>
-    <div class="link-container">
-        <a class="link" href="#" target="_blank">tài khoản Telegram chính chủ<span class="menu">⋮</span></a>
-        <a class="link" href="#" target="_blank">YouTube <span class="menu">⋮</span></a>
-        <a class="link" href="#" target="_blank">Tài khoản TikTok <span class="menu">⋮</span></a>
-        <a class="link" href="#" target="_blank">Tài khoản X của mình<span class="menu">⋮</span></a>
-        <a class="link" href="#" target="_blank">Đăng kí sàn OKX <span class="menu">⋮</span></a>
-        <a class="link" href="#" target="_blank">Đăng kí sàn Bybit <span class="menu">⋮</span></a>
-        <a class="link" href="#" target="_blank">Đăng kí sàn bitget <span class="menu">⋮</span></a>
-        <a class="link" href="#" target="_blank">Nhóm ae Ckrypto <span class="menu">⋮</span></a>
+    <div class="avatar"></div>
+
+    <h1>
+      <span class="username">ThanhCrypto</span>
+    </h1>
+
+    <div class="bio">
+      Building freedom through crypto.<br>
+      AI • Trading • Opportunities
+    </div>
+
+    <div class="small-text" style="text-align:center;">
+      The Market Never Sleeps
+    </div>
+
+    <div class="links">
+
+      <a class="link" href="https://t.me/yourtelegram" target="_blank">
+        <div class="left">
+          <div class="emoji">📢</div>
+          <div class="title">Join Telegram</div>
+        </div>
+
+        <div class="arrow">→</div>
+      </a>
+
+      <a class="link" href="https://www.binance.com/" target="_blank">
+        <div class="left">
+          <div class="emoji">🟡</div>
+          <div class="title">Binance Bonus</div>
+        </div>
+
+        <div class="arrow">→</div>
+      </a>
+
+      <a class="link" href="https://partner.bybit.com/" target="_blank">
+        <div class="left">
+          <div class="emoji">🟣</div>
+          <div class="title">Bybit Rewards</div>
+        </div>
+
+        <div class="arrow">→</div>
+      </a>
+
+      <a class="link" href="https://www.okx.com/" target="_blank">
+        <div class="left">
+          <div class="emoji">⚫</div>
+          <div class="title">OKX Trading</div>
+        </div>
+
+        <div class="arrow">→</div>
+      </a>
+
+      <a class="link" href="https://www.bitget.com/" target="_blank">
+        <div class="left">
+          <div class="emoji">🔵</div>
+          <div class="title">Bitget Events</div>
+        </div>
+
+        <div class="arrow">→</div>
+      </a>
+
+    </div>
+
+    <div class="socials">
+
+      <a class="social" href="#">
+        𝕏
+      </a>
+
+      <a class="social" href="#">
+        ▶
+      </a>
+
+      <a class="social" href="#">
+        ♪
+      </a>
+
     </div>
 
     <footer>
-        &copy; 2025 thanhckrypto
+      © 2026 ThanhCrypto
     </footer>
 
-    <script>
-        function sharePage() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'thanhckrypto',
-                    url: window.location.href
-                }).then(() => {
-                    console.log('Thanks for sharing!');
-                }).catch(console.error);
-            } else {
-                alert('Tính năng chia sẻ không được hỗ trợ trên trình duyệt này.');
-            }
-        }
-    </script>
+  </div>
 
 </body>
-</html> 
+</html>
