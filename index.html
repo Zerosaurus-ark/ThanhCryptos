@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thanh Crypto</title>
+  <title>ThanhCrypto</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -19,20 +20,23 @@
 
     body{
       font-family:'Poppins',sans-serif;
+
       background:
       radial-gradient(circle at top left,#312e81 0%,transparent 30%),
       radial-gradient(circle at bottom right,#7c3aed 0%,transparent 30%),
       linear-gradient(135deg,#020617,#0f172a,#111827);
 
       min-height:100vh;
-      color:white;
 
       display:flex;
       justify-content:center;
       align-items:center;
 
-      overflow-x:hidden;
       padding:30px;
+
+      color:white;
+
+      overflow-x:hidden;
     }
 
     .container{
@@ -40,9 +44,10 @@
       max-width:430px;
 
       background:rgba(255,255,255,0.05);
+
       border:1px solid rgba(255,255,255,0.08);
 
-      backdrop-filter:blur(16px);
+      backdrop-filter:blur(18px);
 
       border-radius:30px;
 
@@ -57,14 +62,16 @@
 
     .top-glow{
       position:absolute;
-      width:200px;
-      height:200px;
+
+      width:220px;
+      height:220px;
 
       background:#8b5cf6;
+
       filter:blur(120px);
 
-      top:-80px;
-      right:-80px;
+      top:-90px;
+      right:-90px;
 
       opacity:0.35;
 
@@ -80,6 +87,7 @@
       border-radius:50%;
 
       background-image:url('https://i.postimg.cc/Y09647gV/unnamed-1.png');
+
       background-size:cover;
       background-position:center;
 
@@ -92,6 +100,7 @@
 
     h1{
       text-align:center;
+
       margin-top:22px;
 
       font-size:32px;
@@ -112,11 +121,15 @@
       color:#cbd5e1;
 
       line-height:1.7;
+
       font-size:15px;
     }
 
     .small-text{
+      text-align:center;
+
       color:#94a3b8;
+
       font-size:13px;
 
       margin-top:8px;
@@ -127,11 +140,13 @@
 
       display:flex;
       flex-direction:column;
+
       gap:16px;
     }
 
     .link{
       text-decoration:none;
+
       color:white;
 
       background:rgba(255,255,255,0.06);
@@ -191,11 +206,17 @@
     .left{
       display:flex;
       align-items:center;
+
       gap:14px;
     }
 
-    .emoji{
-      font-size:22px;
+    .icon{
+      width:28px;
+      height:28px;
+
+      object-fit:contain;
+
+      border-radius:8px;
     }
 
     .title{
@@ -205,6 +226,7 @@
 
     .arrow{
       color:#a78bfa;
+
       font-size:18px;
     }
 
@@ -213,6 +235,7 @@
 
       display:flex;
       justify-content:center;
+
       gap:18px;
     }
 
@@ -229,6 +252,7 @@
       align-items:center;
 
       text-decoration:none;
+
       color:white;
 
       font-size:20px;
@@ -291,55 +315,190 @@
       AI • Trading • Opportunities
     </div>
 
-    <div class="small-text" style="text-align:center;">
+    <div class="small-text">
       The Market Never Sleeps
     </div>
 
     <div class="links">
 
+      <!-- TELEGRAM -->
+
       <a class="link" href="https://t.me/yourtelegram" target="_blank">
+
         <div class="left">
-          <div class="emoji">📢</div>
-          <div class="title">Join Telegram</div>
+
+          <img class="icon"
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"
+          alt="Telegram">
+
+          <div class="title">
+            Join Telegram
+          </div>
+
         </div>
 
         <div class="arrow">→</div>
+
       </a>
 
-      <a class="link" href="https://www.binance.com/" target="_blank">
+      <!-- MEXC -->
+
+      <a class="link" href="YOUR_MEXC_REF" target="_blank">
+
         <div class="left">
-          <div class="emoji">🟡</div>
-          <div class="title">Binance Bonus</div>
+
+          <img class="icon"
+          src="https://seeklogo.com/images/M/mexc-global-logo-5C1E4F6EAE-seeklogo.com.png"
+          alt="MEXC">
+
+          <div class="title">
+            MEXC Rewards
+          </div>
+
         </div>
 
         <div class="arrow">→</div>
+
       </a>
 
-      <a class="link" href="https://partner.bybit.com/" target="_blank">
+      <!-- BITUNIX -->
+
+      <a class="link" href="YOUR_BITUNIX_REF" target="_blank">
+
         <div class="left">
-          <div class="emoji">🟣</div>
-          <div class="title">Bybit Rewards</div>
+
+          <img class="icon"
+          src="https://play-lh.googleusercontent.com/0l3JfXx0u1x0mWwL0L9xQ7Q5Yh6mN1sKX2Y2g6rJrYxXzT5L8uM4YxW6cQ=s180"
+          alt="Bitunix">
+
+          <div class="title">
+            Bitunix Bonus
+          </div>
+
         </div>
 
         <div class="arrow">→</div>
+
       </a>
 
-      <a class="link" href="https://www.okx.com/" target="_blank">
+      <!-- BYBIT -->
+
+      <a class="link" href="YOUR_BYBIT_REF" target="_blank">
+
         <div class="left">
-          <div class="emoji">⚫</div>
-          <div class="title">OKX Trading</div>
+
+          <img class="icon"
+          src="https://seeklogo.com/images/B/bybit-logo-2C4E8FD4A3-seeklogo.com.png"
+          alt="Bybit">
+
+          <div class="title">
+            Bybit Rewards
+          </div>
+
         </div>
 
         <div class="arrow">→</div>
+
       </a>
 
-      <a class="link" href="https://www.bitget.com/" target="_blank">
+      <!-- BINANCE -->
+
+      <a class="link" href="YOUR_BINANCE_REF" target="_blank">
+
         <div class="left">
-          <div class="emoji">🔵</div>
-          <div class="title">Bitget Events</div>
+
+          <img class="icon"
+          src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png?v=040"
+          alt="Binance">
+
+          <div class="title">
+            Binance Bonus
+          </div>
+
         </div>
 
         <div class="arrow">→</div>
+
+      </a>
+
+      <!-- OKX -->
+
+      <a class="link" href="YOUR_OKX_REF" target="_blank">
+
+        <div class="left">
+
+          <img class="icon"
+          src="https://seeklogo.com/images/O/okx-logo-5F7A346B1B-seeklogo.com.png"
+          alt="OKX">
+
+          <div class="title">
+            OKX Trading
+          </div>
+
+        </div>
+
+        <div class="arrow">→</div>
+
+      </a>
+
+      <!-- BINGX -->
+
+      <a class="link" href="YOUR_BINGX_REF" target="_blank">
+
+        <div class="left">
+
+          <img class="icon"
+          src="https://seeklogo.com/images/B/bingx-logo-6E4C7E61B3-seeklogo.com.png"
+          alt="BingX">
+
+          <div class="title">
+            BingX Events
+          </div>
+
+        </div>
+
+        <div class="arrow">→</div>
+
+      </a>
+
+      <!-- BITGET -->
+
+      <a class="link" href="YOUR_BITGET_REF" target="_blank">
+
+        <div class="left">
+
+          <img class="icon"
+          src="https://seeklogo.com/images/B/bitget-logo-341F6B1A53-seeklogo.com.png"
+          alt="Bitget">
+
+          <div class="title">
+            Bitget Events
+          </div>
+
+        </div>
+
+        <div class="arrow">→</div>
+
+      </a>
+
+      <!-- GATE -->
+
+      <a class="link" href="YOUR_GATE_REF" target="_blank">
+
+        <div class="left">
+
+          <img class="icon"
+          src="https://seeklogo.com/images/G/gate-io-logo-A12D6F7D16-seeklogo.com.png"
+          alt="Gate">
+
+          <div class="title">
+            Gate.io Rewards
+          </div>
+
+        </div>
+
+        <div class="arrow">→</div>
+
       </a>
 
     </div>
